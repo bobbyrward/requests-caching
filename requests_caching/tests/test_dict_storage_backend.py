@@ -34,8 +34,7 @@ class TestDictStorageBackend(unittest.TestCase):
         backend = DictStorageBackend()
         backend.delete('key')
 
-    def test_get_missing_key_keyerror(self):
+    def test_get_missing_returns_none(self):
         backend = DictStorageBackend()
-
-        with self.assertRaises(KeyError):
-            backend.get('key')
+        returned = backend.get('key')
+        self.assertIsNone(returned)

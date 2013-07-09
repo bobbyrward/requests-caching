@@ -12,7 +12,10 @@ class DictStorageBackend(StorageBackend):
         self.cache[key] = value
 
     def get(self, key):
-        return self.cache[key]
+        try:
+            return self.cache[key]
+        except KeyError:
+            return None
 
     def delete(self, key):
         try:
