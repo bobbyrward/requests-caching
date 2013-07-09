@@ -17,7 +17,7 @@ setup(
     author='Bobby R. Ward',
     author_email='bobbyrward@gmail.com',
     license='MIT',
-    packages=['request_caching'],
+    packages=['requests_caching'],
     install_requires=requirements,
     classifiers=[
         'Development Status :: 1 - Planning',
