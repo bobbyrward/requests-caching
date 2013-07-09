@@ -4,6 +4,15 @@ from requests_caching.storage.backends.dict_backend import DictStorageBackend
 
 
 class TestDictStorageBackend(unittest.TestCase):
+    def test_backing_default(self):
+        backend = DictStorageBackend()
+        self.assertIsInstance(backend.cache, dict)
+
+    def test_backing_provided(self):
+        backing = {}
+        backend = DictStorageBackend(backing)
+        self.assertIs(backend.cache, backing)
+
     def test_set_new_key(self):
         backend = DictStorageBackend()
         backend.set('key', 'value')
