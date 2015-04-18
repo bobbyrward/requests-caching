@@ -19,6 +19,7 @@ setup(
     license='MIT',
     packages=['requests_caching'],
     install_requires=requirements,
+    setup_requires=['nose>=1.0', 'mock>=1.0'],
     classifiers=[
         'Development Status :: 1 - Planning',
         'Programming Language :: Python',
